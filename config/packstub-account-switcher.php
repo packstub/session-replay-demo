@@ -96,7 +96,8 @@ return [
     |
     */
 
-    'log_switches' => true,
+    // Off: the demo uses only the developer logins and has no account_switches table.
+    'log_switches' => false,
 
     /*
     |--------------------------------------------------------------------------
