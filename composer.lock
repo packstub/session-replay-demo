@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f397796267fb147260b8dd324fa41038",
+    "content-hash": "cb4d6b2f53dc2289ec7424d5735ccf41",
     "packages": [
         {
             "name": "brick/math",
@@ -2694,16 +2694,16 @@
         },
         {
             "name": "packstub/account-switcher",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/packstub/account-switcher.git",
-                "reference": "60521328f123086bc7d8bc7d3327e24769413808"
+                "reference": "614358819be3809e1ca6b403753b597a311c6f53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/packstub/account-switcher/zipball/60521328f123086bc7d8bc7d3327e24769413808",
-                "reference": "60521328f123086bc7d8bc7d3327e24769413808",
+                "url": "https://api.github.com/repos/packstub/account-switcher/zipball/614358819be3809e1ca6b403753b597a311c6f53",
+                "reference": "614358819be3809e1ca6b403753b597a311c6f53",
                 "shasum": ""
             },
             "require": {
@@ -2716,19 +2716,18 @@
                 "orchestra/testbench": "^10.0 || ^11.0",
                 "pestphp/pest": "^4.0 || ^5.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                },
                 "laravel": {
-                    "providers": [
-                        "Packstub\\AccountSwitcher\\AccountSwitcherServiceProvider"
-                    ],
                     "aliases": {
                         "AccountSwitcher": "Packstub\\AccountSwitcher\\Facades\\AccountSwitcher"
-                    }
+                    },
+                    "providers": [
+                        "Packstub\\AccountSwitcher\\AccountSwitcherServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
                 }
             },
             "autoload": {
@@ -2736,25 +2735,7 @@
                     "Packstub\\AccountSwitcher\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Packstub\\AccountSwitcher\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:filter": [
-                    "pest --filter"
-                ],
-                "lint": [
-                    "vendor/bin/pint"
-                ],
-                "lint:test": [
-                    "vendor/bin/pint --test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2785,17 +2766,17 @@
                 "switch-user"
             ],
             "support": {
+                "docs": "https://packstub.dev/docs/account-switcher",
                 "issues": "https://github.com/packstub/account-switcher/issues",
-                "source": "https://github.com/packstub/account-switcher",
-                "docs": "https://packstub.dev/docs/account-switcher"
+                "source": "https://github.com/packstub/account-switcher"
             },
             "funding": [
                 {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/icaliman"
+                    "url": "https://github.com/sponsors/icaliman",
+                    "type": "github"
                 }
             ],
-            "time": "2026-10-22T18:15:35+00:00"
+            "time": "2026-10-27T12:50:35+00:00"
         },
         {
             "name": "packstub/session-replay",
@@ -10146,9 +10127,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "packstub/account-switcher": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
