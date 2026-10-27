@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5642d2f4ef0f1aaa8afd649f0ca25231",
+    "content-hash": "f397796267fb147260b8dd324fa41038",
     "packages": [
         {
             "name": "brick/math",
@@ -2691,6 +2691,111 @@
                 "source": "https://github.com/opcodesio/mail-parser/tree/v0.2.4"
             },
             "time": "2026-06-11T08:50:37+00:00"
+        },
+        {
+            "name": "packstub/account-switcher",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/packstub/account-switcher.git",
+                "reference": "60521328f123086bc7d8bc7d3327e24769413808"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/packstub/account-switcher/zipball/60521328f123086bc7d8bc7d3327e24769413808",
+                "reference": "60521328f123086bc7d8bc7d3327e24769413808",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^12.0 || ^13.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.92"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.27",
+                "orchestra/testbench": "^10.0 || ^11.0",
+                "pestphp/pest": "^4.0 || ^5.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Packstub\\AccountSwitcher\\AccountSwitcherServiceProvider"
+                    ],
+                    "aliases": {
+                        "AccountSwitcher": "Packstub\\AccountSwitcher\\Facades\\AccountSwitcher"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Packstub\\AccountSwitcher\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Packstub\\AccountSwitcher\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "pest"
+                ],
+                "test:filter": [
+                    "pest --filter"
+                ],
+                "lint": [
+                    "vendor/bin/pint"
+                ],
+                "lint:test": [
+                    "vendor/bin/pint --test"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Caliman",
+                    "email": "icaliman92@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Packstub",
+                    "email": "support@packstub.dev",
+                    "homepage": "https://packstub.dev"
+                }
+            ],
+            "description": "Switch between accounts in a Laravel app without signing out: user impersonation with a banner and switch back, linked sub-accounts with password-confirmed escalation, one-click developer logins, and an audit log of every switch. packstub/filament-account-switcher adds the panel UI.",
+            "homepage": "https://github.com/packstub/account-switcher",
+            "keywords": [
+                "account-switcher",
+                "developer-login",
+                "impersonate",
+                "impersonation",
+                "laravel",
+                "linked-accounts",
+                "login-as",
+                "packstub",
+                "sub-accounts",
+                "switch-user"
+            ],
+            "support": {
+                "issues": "https://github.com/packstub/account-switcher/issues",
+                "source": "https://github.com/packstub/account-switcher",
+                "docs": "https://packstub.dev/docs/account-switcher"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/icaliman"
+                }
+            ],
+            "time": "2026-10-22T18:15:35+00:00"
         },
         {
             "name": "packstub/session-replay",
@@ -10041,7 +10146,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "packstub/account-switcher": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

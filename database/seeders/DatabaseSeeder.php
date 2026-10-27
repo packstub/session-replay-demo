@@ -11,9 +11,12 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Recordings of an earlier run point at rows that migrate:fresh just dropped.
-        Storage::disk(config('session-replay.storage.disk'))->deleteDirectory(config('session-replay.storage.directory'));
-        file_put_contents(storage_path('logs/laravel.log'), '');
+        // Recordings of an earlier run point at rows that migrate:fresh just dropped. Not in the
+        // tests: they seed an in-memory database, and the disk and the log are the demo's own.
+        if (! app()->runningUnitTests()) {
+            Storage::disk(config('session-replay.storage.disk'))->deleteDirectory(config('session-replay.storage.directory'));
+            file_put_contents(storage_path('logs/laravel.log'), '');
+        }
 
         User::factory()->create(['name' => 'Support', 'email' => 'support@acme.test', 'is_support' => true]);
 

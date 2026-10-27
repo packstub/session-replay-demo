@@ -15,6 +15,7 @@
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
         "opcodesio/log-viewer": "^3.24",
+        "packstub/account-switcher": "dev-main",
         "packstub/session-replay": "^1.0"
     },
     "require-dev": {
@@ -97,5 +98,10 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [{
+        "name": "account-switcher",
+        "type": "vcs",
+        "url": "https://github.com/packstub/account-switcher"
+    }]
 }

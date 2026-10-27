@@ -6,6 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
+use Packstub\AccountSwitcher\Facades\AccountSwitcher;
+
+// The developer login buttons on /login post here (local only).
+AccountSwitcher::routes();
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'show'])->name('login');

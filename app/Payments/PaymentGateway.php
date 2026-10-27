@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
  */
 class PaymentGateway
 {
-    public function charge(int $cents, string $card): string
+    public function charge(int $cents, #[\SensitiveParameter] string $card): string
     {
         usleep(900_000); // a round trip to the provider
 
