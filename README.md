@@ -62,6 +62,21 @@ Recordings go to `storage/app/private/session-replay` (gzip chunks) and to a few
 composer test
 ```
 
+## More from Packstub
+
+Other Packstub packages that sit well next to Session Replay:
+
+- **[Filament Session Replay](https://packstub.dev/plugins/filament-session-replay)**: the same recordings inside a Filament panel, with a Sessions resource and the player on a watch page.
+- **[Filament Tenancy](https://packstub.dev/plugins/filament-tenancy)** (paid): a database per workspace for Filament panels, built on stancl/tenancy. Session Replay keeps every recording in its workspace and its tables can stay on the central connection, so the two fit together.
+- **[Account Switcher for Laravel](https://packstub.dev/plugins/account-switcher)**: impersonation, linked accounts and one-click developer logins. The "Developer logins" buttons in this demo come from it.
+- **[Agents for Laravel](https://packstub.dev/plugins/agents)**: an AI agent and an MCP server from one list of tools, under your app's own authorization.
+- **[Filament Flow](https://packstub.dev/plugins/filament-flow)**: visual workflow automations for a Filament panel, with triggers, conditions and actions drawn on a canvas.
+- **[Filament Kanban](https://packstub.dev/plugins/filament-kanban)**: a Kanban board for Filament with instant drag and drop and rules checked on the server.
+
+All plugins: [packstub.dev/plugins](https://packstub.dev/plugins).
+
+Packstub is made by [XLITE](https://xlite.dev), a small studio that also builds Laravel and Filament apps for clients.
+
 ## License
 
 MIT. See [LICENSE.md](LICENSE.md).
