@@ -64,10 +64,16 @@ it('answers a validation error as JSON', function () {
 it('logs the failed payment without the card number or the machine path', function () {
     $this->actingAs($this->customer)->post(route('cart.add', Product::first()));
 
+    // A production php.ini leaves arguments out of traces altogether (zend.exception_ignore_args=On);
+    // turn them on, as on a development machine, so the test shows what #[SensitiveParameter] does.
+    $ignoreArgs = ini_set('zend.exception_ignore_args', '0');
+
     try {
         $this->withoutExceptionHandling()->postJson('/checkout/pay', checkout(['card' => '4000 0000 0000 0119']));
     } catch (PaymentFailed $e) {
         $trace = $e->getTraceAsString();
+    } finally {
+        ini_set('zend.exception_ignore_args', $ignoreArgs);
     }
 
     expect($trace)->not->toContain('4000000000000119')->toContain('SensitiveParameterValue');
