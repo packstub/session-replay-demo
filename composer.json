@@ -15,8 +15,8 @@
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
         "opcodesio/log-viewer": "^3.24",
-        "packstub/account-switcher": "^1.0",
-        "packstub/session-replay": "^1.0"
+        "packstub/account-switcher": "^1.1",
+        "packstub/session-replay": "^1.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
